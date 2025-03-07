@@ -1,0 +1,261 @@
+/* src/css/services.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.services-first {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Plus Icon and Attached Form */
+.add-service-wrapper {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 200; /* Higher than other elements */
+}
+
+.add-service-icon {
+    font-size: 1.5em;
+    background-color: yellow; /* Matching WhatsApp color */
+    color: black;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 200; /* Ensure it stays on top */
+    position: relative; /* Ensure it doesn’t move when clicked */
+}
+
+.add-service-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide-in Form */
+.add-service-form {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s forwards;
+    z-index: 300; /* Ensures form appears above other elements */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.add-service-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: rgb(255, 204, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-service-button:hover {
+    background-color: #e0a800;
+}
+
+/* Service Cards */
+.services-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.services-page h2 {
+    font-size: 2.8em;
+    color: rgb(255, 204, 0);
+    margin-bottom: 20px;
+}
+
+.services-page p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 700px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    color: rgb(255, 204, 0);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Buy Now Button */
+.btn-buy {
+    background: linear-gradient(90deg, yellow, rgb(255, 208, 0)); /* Gradient background */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px; /* Rounded edges */
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    width: 100%; /* Full width */
+    margin-top: 15px; /* Spacing */
+}
+
+.btn-buy:hover {
+    background: linear-gradient(90deg, yellow, rgb(255, 208, 0)); /* Reverse gradient on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Already Purchased Button */
+.purchased {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.discount-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  .popup-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: rgb(246, 176, 12);
+    text-align: center;
+  }
+  
+  .popup-content p {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .claim-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .claim-button:hover {
+    background-color: green;
+  }
+  

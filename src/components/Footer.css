@@ -1,0 +1,42 @@
+/* src/components/Footer.css */
+
+.home-footer {
+    background: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+}
+
+.footer-section {
+    max-width: 300px;
+    margin: 20px;
+}
+
+.footer-section h2, .footer-section h3 {
+    font-size: 1.2em;
+    color: yellow;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    color: #ccc;
+}

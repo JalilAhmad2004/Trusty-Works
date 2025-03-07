@@ -1,0 +1,192 @@
+/* src/css/contactus.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.contact-us-page {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.contact-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.contact-info {
+    background: rgba(255, 204, 0, 0.2); /* Translucent yellow background */
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 8px;
+    color: #ffcc00;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    min-width: 280px;
+    width: 300px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50px; /* Adjust position horizontally */
+    transform: translateY(-50%); /* Offset vertically */
+    z-index: 1; /* Default z-index */
+    transition: z-index 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.contact-info p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons i {
+    font-size: 1.5em;
+    color: #ffcc00;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 250px; /* Adjust to align with the Contact Info box */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    z-index: 0; /* Default z-index */
+    transition: z-index 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-form h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button:hover {
+    background-color: #e0a800;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover and Focus Effects for Bringing Sections to the Front */
+.contact-info:focus,
+.contact-info:hover {
+    z-index: 2; /* Brings to front */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form:focus,
+.contact-form:hover {
+    z-index: 2; /* Brings to front */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

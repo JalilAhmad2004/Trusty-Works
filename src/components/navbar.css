@@ -1,0 +1,26 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    padding: 20px 40px;
+    border-bottom: 1px solid #555;
+}
+
+.navbar-logo {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 1em;
+}
