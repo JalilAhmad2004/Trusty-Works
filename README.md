@@ -16,8 +16,8 @@ We provide tailored project solutions to meet the needs of students and professi
 
 - **React** – Frontend framework
 - **Firebase** – Backend database and authentication
-- **CSS & Tailwind** – Styling
-- **JavaScript (ES6)** – Programming language
+- **CSS** – Styling
+- **JavaScript** – Programming language
 - **Node.js & npm** – Package management
 
 ---
