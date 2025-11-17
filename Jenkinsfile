@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven3'
+    }
+
     environment {
         VERSION = "1.0.0"
     }
@@ -9,7 +13,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building version: ${env.VERSION}"
-                // Here you can define commands for your build
+                // On Windows, use bat instead of sh
+                bat "mvn -version"
             }
         }
 
@@ -19,14 +24,12 @@ pipeline {
             }
             steps {
                 echo 'Testing..'
-                // Here you can define commands for your tests
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                // Here you can define commands for your deployment
             }
         }
     }
