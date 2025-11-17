@@ -9,18 +9,28 @@ pipeline {
         VERSION = "1.0.0"
     }
 
+    parameters {
+        booleanParam(
+            name: 'executeTests',
+            defaultValue: true,
+            description: 'If true, run the Test stage'
+        )
+    }
+
     stages {
         stage('Build') {
             steps {
                 echo "Building version: ${env.VERSION}"
-                // On Windows, use bat instead of sh
                 bat "mvn -version"
             }
         }
 
         stage('Test') {
             when {
-                branch 'main'
+                allOf {
+                    branch 'main'
+                    expression { params.executeTests }
+                }
             }
             steps {
                 echo 'Testing..'
